@@ -7,7 +7,8 @@ For more details about PMFS, please check the git repository:
 
 https://github.com/linux-pmfs/pmfs
 
-This project ports PMFS to the latest Linux kernel so developers can compare PMFS to other file systems on the new kernel.
+## Modify
+We modify the origin PMFS with additional interfaces as our KernelFS.
 
 ## Building PMFS
 The master branch works on the 4.15 version of x86-64 Linux kernel.
