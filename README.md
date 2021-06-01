@@ -8,7 +8,7 @@ For more details about PMFS, please check the git repository:
 https://github.com/linux-pmfs/pmfs
 
 ## Modify
-We modify the origin PMFS with additional interfaces as our KernelFS.
+We modify the origin PMFS with additional interfaces as our KernelFS. Sync_meta.c contains new additional functions to allocate metadata (free space and inodes) to Userfs, and update metadata (file inode, file index, directory entry, free inode, and free space) from Userfs.  
 
 ## Building PMFS
 The master branch works on the 4.15 version of x86-64 Linux kernel.
@@ -16,7 +16,7 @@ The master branch works on the 4.15 version of x86-64 Linux kernel.
 To build PMFS, simply run a
 
 ~~~
-#make
+# make
 ~~~
 
 command.
@@ -33,13 +33,18 @@ After the OS has booted, you can initialize a PMFS instance with the following c
 
 
 ~~~
-#insmod pmfs.ko
-#mount -t pmfs -o init /dev/pmem0 /mnt/ramdisk 
+# insmod pmfs.ko
+# mount -t pmfs -o init /dev/pmem0 /mnt/ramdisk 
 ~~~
 
 The above commands create a PMFS instance on pmem0 device, and mount on `/mnt/ramdisk`.
 
+
 To recover an existing PMFS instance, mount PMFS without the init option, for example:
+
+~~~
+We also provide a script to mount the filesystem on a given directory.
+~~~
 
 ~~~
 #mount -t pmfs /dev/pmem0 /mnt/ramdisk 
