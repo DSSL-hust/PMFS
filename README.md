@@ -44,6 +44,7 @@ To recover an existing PMFS instance, mount PMFS without the init option, for ex
 
 ~~~
 We also provide a script to mount the filesystem on a given directory.
+# ./mount.sh
 ~~~
 
 ~~~
