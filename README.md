@@ -7,7 +7,7 @@ For more details about PMFS, please check the git repository:
 
 https://github.com/linux-pmfs/pmfs
 
-## Modify
+## Modify for NSPFS as KernelFS
 We modify the origin PMFS with additional interfaces as our KernelFS. Sync_meta.c contains new additional functions to allocate metadata (free space and inodes) to Userfs, and update metadata (file inode, file index, directory entry, free inode, and free space) from Userfs.  
 
 ## Building PMFS
