@@ -48,7 +48,7 @@ We also provide a script to mount the filesystem on a given directory.
 ~~~
 
 ~~~
-#mount -t pmfs /dev/pmem0 /mnt/ramdisk 
+# mount -t pmfs /dev/pmem0 /mnt/ramdisk 
 ~~~
 
 There are two scripts provided in the source code, `setup-pmfs.sh` and `remount-pmfs.sh` to help setup PMFS.
