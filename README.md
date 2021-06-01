@@ -34,10 +34,10 @@ After the OS has booted, you can initialize a PMFS instance with the following c
 
 ~~~
 # insmod pmfs.ko
-# mount -t pmfs -o init /dev/pmem0 /mnt/ramdisk 
+# mount -t pmfs -o init /dev/pmem0 /mnt/pmem_emul 
 ~~~
 
-The above commands create a PMFS instance on pmem0 device, and mount on `/mnt/ramdisk`.
+The above commands create a PMFS instance on pmem0 device, and mount on `/mnt/pmem_emul`.
 
 
 To recover an existing PMFS instance, mount PMFS without the init option, for example:
@@ -48,7 +48,7 @@ We also provide a script to mount the filesystem on a given directory.
 ~~~
 
 ~~~
-# mount -t pmfs /dev/pmem0 /mnt/ramdisk 
+# mount -t pmfs /dev/pmem0 /mnt/pmem_emul 
 ~~~
 
 There are two scripts provided in the source code, `setup-pmfs.sh` and `remount-pmfs.sh` to help setup PMFS.
